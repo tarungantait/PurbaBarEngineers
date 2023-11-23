@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            background-image: url('/images/ganesh_image.jpg');
+            background-size: cover;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Adjust the opacity as needed */
+            border-radius: 10px;
+            margin: 50px;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        
+        .colorful-text {
+            display: inl;
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="colorfulSentence">
+        <span class="colorful-text">পূর্ববাড় </span>
+        <span class="colorful-text">ইঞ্জিনিয়ার দের</span>
+        <span class="colorful-text">পক্ষ থেকে</span>
+        <span class="colorful-text">আপনাকে স্বাগত জানাই</span>
+    </div>
+
+
+    <div class="container">
+        <div class="card" onclick="openPage('events')">Events</div>
+        <div class="card" onclick="openPage('gallery')">Gallery</div>
+        <div class="card" onclick="openPage('members')">Members</div>
+        <div class="card" onclick="openPage('notice')">Notice</div>
+        <div class="card" onclick="openPage('best-events')">Best Events</div>
+        <div class="card" onclick="openPage('simple')">Best Events</div>
+    </div>
+
+    <script>
+        function openPage(page) {
+    switch (page) {
+        case 'events':
+            window.location.href = '/events'; /* Corrected path for the events page */
+            break;
+        case 'gallery':
+            window.location.href = '/gallery';
+            break;
+        case 'members':
+            window.location.href = '/members';
+            break;
+        case 'notice':
+            window.location.href = '/notice';
+            break;
+        case 'best-events':
+            window.location.href = '/best-events';
+            break;
+            case 'simple':
+            window.location.href = '/simple';
+            break;    
+        default:
+            break;
+    }
+}
+
+
+function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to animate the text color
+        function animateColorfulText() {
+            const colorfulText = document.querySelectorAll('.colorful-text');
+
+            colorfulText.forEach(word => {
+                setInterval(() => {
+                    word.style.color = getRandomColor();
+                }, 500); // Change color every 500 milliseconds
+            });
+        }
+
+        // Call the animation function when the page loads
+        window.onload = animateColorfulText;
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- best-events.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Best Events</title>
+</head>
+<body>
+    <h1>Best Events Page</h1>
+    <!-- Add your content here -->
+
+    <div class="container">
+        <div class="card" onclick="openPage('Index')">Events</div>
+    </div>
+
+    <script>
+        function openPage(page) {
+    switch (page) {
+        case 'Index':
+            window.location.href = '/Index'; /* Corrected path for the events page */
+            break;
+        default:
+            break;
+    }
+}
+
+    </script>
+</body>
+</html>

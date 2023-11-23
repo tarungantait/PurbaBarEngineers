@@ -1,0 +1,6 @@
+body {
+    background-image: url('/images/ganesh_image.jpg');
+    background-size: cover;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
