@@ -8,6 +8,19 @@ const port = 3000;
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+function openPage(page) {
+    const baseURL = window.location.href.includes('github.io') ? '/repository' : ''; // Adjust 'repository' to your actual repository name
+    switch (page) {
+        case 'events':
+            window.location.href = `${baseURL}/events`;
+            break;
+        // ... (similar adjustments for other pages)
+        default:
+            break;
+    }
+}
+
 // Define routes for each section
 app.get('/', (req, res) => {
     console.log('Request for main page received.');
